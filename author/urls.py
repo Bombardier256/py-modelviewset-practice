@@ -4,10 +4,10 @@ from .views import AuthorViewSet
 
 
 router = routers.DefaultRouter()
-router.register("", AuthorViewSet)
+router.register("authors", AuthorViewSet, basename="manage")
 
 urlpatterns = [
-    path("authors/", include(router.urls)),
+    path("", include(router.urls )),
 ]
 
 app_name = "author"
